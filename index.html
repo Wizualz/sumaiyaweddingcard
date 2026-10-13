@@ -154,6 +154,76 @@ sup{font-size:.55em;vertical-align:.7em;line-height:0}
 @keyframes cue{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
 @media(prefers-reduced-motion:reduce){.rv,.ink,.ban.rv{transition:none;opacity:1;transform:none;clip-path:none}.sp,.tw,.lt,.wm,.big,.wd,.seal::before{animation:none}.ht{stroke-dashoffset:0;transition:none}.arch path{stroke-dashoffset:0;transition:none}}
 @media(prefers-reduced-motion:reduce){.sx .ch{transition:none;opacity:1;transform:none;filter:none}.big .ch,.lg,.lg::after,.sw,.r1,.r2,.btn::after,.tk,.fl,.gn,.cr,.ga,.tap{animation:none}.r1{stroke-dashoffset:0}.hp{stroke-dashoffset:0!important;transition:none}.hf,.hm{opacity:1!important;transform:none!important;transition:none}.hz,.hb,.hrp,.hsw,.hm,.tws,.gs .ch,.amp,.gnm{animation:none!important}.nm.wr{clip-path:none!important;transition:none}}
+
+/* ================= MOBILE RESPONSIVE FIXES ================= */
+/* --u = gate scale unit: 1px on tall screens, shrinks on short screens (small phones, browser bars, landscape) */
+:root{--u:min(1px,.14vh);--lw:clamp(30px,10.5vw,42px)}
+@supports (height:1svh){:root{--u:min(1px,.14svh)}}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%;overscroll-behavior-x:none}
+
+/* decorative fixed layers: respect notch / rounded corners (landscape too) */
+.fr{left:calc(8px + env(safe-area-inset-left,0px));right:calc(8px + env(safe-area-inset-right,0px))}
+.c{width:clamp(52px,19vw,78px);height:clamp(52px,19vw,78px)}
+.tl,.bl{left:calc(3px + env(safe-area-inset-left,0px))}
+.tr,.br{right:calc(3px + env(safe-area-inset-right,0px))}
+.v.a{left:calc(7px + env(safe-area-inset-left,0px))}
+.v.b{right:calc(7px + env(safe-area-inset-right,0px))}
+
+/* gate (curtain + seal + names): everything scales with screen height so nothing falls off short phones */
+.cr{top:calc(50% - var(--u)*158);width:calc(var(--u)*36);height:calc(var(--u)*36);margin-left:calc(var(--u)*-18)}
+.sw{width:calc(var(--u)*150);height:calc(var(--u)*150);margin:calc(var(--u)*-81) 0 0 calc(var(--u)*-75)}
+.lg{inset:calc(var(--u)*15)}
+.rg{left:calc(var(--u)*-26);top:calc(var(--u)*-26);width:calc(var(--u)*202);height:calc(var(--u)*202)}
+.seal::before{inset:calc(var(--u)*-10)}
+.tap{top:calc(50% + var(--u)*112);font-size:max(10px,calc(var(--u)*12))}
+.gn{top:calc(50% + var(--u)*142);gap:calc(var(--u)*4)}
+.gnm{font-size:max(26px,min(calc(var(--u)*56),12.6vw))}
+.amp{font-size:max(20px,min(calc(var(--u)*38),9vw));gap:calc(var(--u)*12)}
+
+/* sections: no sideways scroll, safe-area aware side padding */
+.sec{overflow-x:clip;padding-left:max(38px,calc(env(safe-area-inset-left,0px) + 26px));padding-right:max(38px,calc(env(safe-area-inset-right,0px) + 26px))}
+
+/* lanterns scale with width and never collide with the content below them */
+.lt{width:var(--lw);height:calc(var(--lw)*2.5)}
+.lt.c{margin-left:calc(var(--lw)/-2);top:3%}
+.hero{padding-top:max(clamp(76px,12svh,110px),calc(var(--lw)*2.5 + 22px))}
+.vs{padding-top:max(140px,calc(var(--lw)*2.5 + 40px))}
+
+/* text */
+.nm{font-size:clamp(36px,13vw,66px)}
+.ln,.pf,.hs{text-wrap:balance}
+.nik{max-width:100%}
+
+/* easier to tap on touch screens */
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;max-width:100%;text-align:center;line-height:1.3;white-space:normal;touch-action:manipulation}
+.tel{padding:10px 0}
+
+/* small phones (<= 359px wide) */
+@media(max-width:359px){
+.sec,.vs{padding-left:max(32px,calc(env(safe-area-inset-left,0px) + 22px));padding-right:max(32px,calc(env(safe-area-inset-right,0px) + 22px))}
+.ln{letter-spacing:.05em}
+.hs,.sm{letter-spacing:.14em}
+.btn{letter-spacing:.14em;padding:10px 16px}
+.ban{padding:22px 10px}
+.nik{letter-spacing:0}
+#cd{gap:6px}
+#cd span{letter-spacing:.12em}
+.tel{letter-spacing:.06em}
+}
+
+/* landscape phones / very short screens */
+@media(orientation:landscape) and (max-height:520px){
+:root{--lw:28px}
+.sec{padding-top:22px;padding-bottom:22px}
+.hero{padding-top:calc(var(--lw)*2.5 + 14px)}
+.vs{padding-top:96px;padding-bottom:56px}
+.cue{margin-top:18px}
+.dv{margin:14px auto}
+.ban{padding:18px 14px}
+#cd{margin-top:16px}
+#gate .d::after{height:20px}
+.c{width:52px;height:52px}
+}
 </style>
 </head>
 <body class="lock">
