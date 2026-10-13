@@ -209,6 +209,31 @@ body{-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
 .scr i{font:600 2.3em/1 'Dancing Script','Brush Script MT',cursive;color:#0f4a3a}
 .scr em{font:700 1.5em/1 'Dancing Script','Brush Script MT',cursive;letter-spacing:.04em;margin:2px 0 0;color:#a8782f}
 .scc{margin-top:16px;font:500 11px Jost,sans-serif;letter-spacing:.3em;margin-right:-.3em;color:var(--soft)}
+.cpw{position:relative;margin-top:8px;opacity:0;transform:translateY(16px);filter:blur(6px);transition:opacity 1.6s 1.4s,transform 1.6s 1.4s cubic-bezier(.2,.7,.2,1),filter 1.6s 1.4s}
+.cpw svg{display:block;height:clamp(170px,26svh,230px);width:auto;overflow:visible}
+.kd .cpw{opacity:1;transform:none;filter:none}
+.cgm,.cbr{transition:transform 2.4s 1.8s cubic-bezier(.3,.7,.2,1)}.cgm{transform:translateX(-24px)}.cbr{transform:translateX(24px)}.kd .cgm,.kd .cbr{transform:none}
+.cps,.cgs{opacity:0;transition:opacity 1.5s 3.8s}.cgs{filter:blur(2px)}.cps{filter:blur(1.2px)}.kd .cps{opacity:.28}.kd .cgs{opacity:.3}
+.kd .cpw svg{animation:cpf 6s 3.6s ease-in-out infinite}
+.dup,.cgl,.cph{transform-box:fill-box}.dup{transform-origin:20% 0}.cgl,.cph{transform-origin:center}.cph{opacity:0}
+.kd .dup{animation:dw 4.5s ease-in-out infinite}.kd .cgl{animation:cg 5s ease-in-out infinite}
+.kd .cph{animation:ch 3.6s 4s ease-out infinite}.kd .cph.b{animation-delay:5.8s}
+.pt2{position:absolute;top:-6px;left:var(--x);width:6px;height:9px;background:#e8cf94;border-radius:60% 0 60% 0;opacity:0;pointer-events:none}
+.kd .pt2{animation:pf 7s var(--d) linear infinite}
+@keyframes cpf{50%{transform:translateY(-3px)}}
+@keyframes dw{0%,100%{transform:skewX(0) rotate(0)}50%{transform:skewX(-5deg) rotate(2.5deg)}}
+@keyframes cg{50%{opacity:.7;transform:scale(1.07)}}
+@keyframes ch{0%{opacity:0;transform:translateY(0) scale(.5)}25%{opacity:1}100%{opacity:0;transform:translateY(-46px) scale(1.2)}}
+@keyframes pf{0%{opacity:0;transform:translate(0,0) rotate(0)}10%{opacity:.75}100%{opacity:0;transform:translate(var(--s),220px) rotate(540deg)}}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) #cpl{fill:#3aa07f}}
+:root[data-theme="dark"] #cpl{fill:#3aa07f}
+@media(prefers-reduced-motion:reduce){.cpw{opacity:1;transform:none;filter:none;transition:none}.cgm,.cbr{transform:none!important;transition:none}.cps{opacity:.28!important}.cgs{opacity:.3!important}.cpw svg,.cpw *{animation:none!important}}
+.wm{width:min(100vw,480px)}
+.sec{overflow-x:hidden;overflow-x:clip}
+.big{white-space:nowrap;font-size:clamp(30px,10.6vw,68px);letter-spacing:.12em;margin-right:-.12em}
+.sch{-webkit-clip-path:url(#hcl)}
+#scv{-webkit-touch-callout:none;-webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}
+@media(max-height:640px){.gn{top:calc(50% + 120px)}.tap{top:calc(50% + 102px)}.gnm{font-size:clamp(32px,9.6vw,40px)}.amp{font-size:clamp(24px,7vw,30px)}.gn{gap:0}}
 </style>
 </head>
 <body class="lock">
@@ -238,6 +263,20 @@ body{-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
 <div class="dv rv" style="--d:.5s"><i></i><svg width="34" height="34"><use href="#m"/></svg><i></i></div>
 <h1 class="big sx rv" style="--d:.9s">WEDDING</h1>
 <p class="inv rv" style="--d:1.4s">INVITATION</p>
+<div class="cpw" aria-hidden="true"><svg viewBox="0 0 180 262" width="124" height="180"><defs>
+<linearGradient id="cfl" gradientUnits="userSpaceOnUse" x1="0" y1="16" x2="0" y2="200"><stop offset="0" stop-color="#1d7058"/><stop offset="1" stop-color="#072a20"/></linearGradient>
+<radialGradient id="cfo"><stop offset="0" stop-color="#f6e7b8" stop-opacity=".6"/><stop offset=".6" stop-color="#e9c97a" stop-opacity=".18"/><stop offset="1" stop-color="#e9c97a" stop-opacity="0"/></radialGradient>
+<linearGradient id="cfg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#000"/></linearGradient>
+<mask id="cfm"><rect x="0" y="200" width="180" height="62" fill="url(#cfg)"/></mask></defs>
+<circle class="cgl" cx="90" cy="104" r="86" fill="url(#cfo)"/>
+<ellipse class="cgs" cx="92" cy="199" rx="60" ry="4.5" fill="#072a20"/>
+<g class="cps" mask="url(#cfm)"><use href="#cpl" transform="translate(0 200) scale(1 -.32) translate(0 -200)"/></g>
+<g id="cpl" fill="url(#cfl)">
+<g class="cgm"><ellipse cx="66" cy="40" rx="9.5" ry="11"/><path d="M54 36c1-13 8-20 13-20s12 7 13 20c-7-5-19-5-26 0z"/><path d="M44 76c3-10 11-16 22-16s19 6 22 16l5 58H39z"/><path d="M47 130h17l-2 68H50zM69 130h17l-2 68H71z"/><path d="M42 78c-5 14-7 32-6 50l7 1c0-16 2-32 5-46z"/><path d="M88 78c6 14 12 32 16 50l-7 3c-4-18-9-34-14-46z"/></g>
+<g transform="translate(4 0)"><g class="cbr"><ellipse cx="114" cy="54" rx="8.5" ry="10"/><path d="M102 52c-3-16 6-24 13-24 9 0 14 8 12 22l-6-2c-3-8-8-12-19 4z"/><path d="M101 70c3-5 18-5 22 0l3 26h-28z"/><path d="M100 95c5-4 22-4 26 0l22 103H76z"/><path d="M101 72c-4 14-2 38 0 56l6-1c-1-18-1-40 1-54z"/><path d="M123 72c4 14 5 30 5 46l-6 1c0-16-1-32-5-44z"/><path class="dup" d="M126 46c10 4 18 16 18 40 0 24 6 52 14 84-12-6-22-20-26-44-2-12-4-24-8-34z"/></g></g></g>
+<g transform="translate(101 112)"><path class="cph" d="M0 6c-8-6-8-12-3-12 2 0 3 1 3 3 0-2 1-3 3-3 5 0 5 6-3 12z" fill="#c9a45c"/></g>
+<g transform="translate(112 118)"><path class="cph b" d="M0 6c-8-6-8-12-3-12 2 0 3 1 3 3 0-2 1-3 3-3 5 0 5 6-3 12z" fill="#e8cf94"/></g>
+</svg><i class="pt2" style="--x:8%;--s:18px;--d:4.5s"></i><i class="pt2" style="--x:24%;--s:-14px;--d:6.2s"></i><i class="pt2" style="--x:40%;--s:22px;--d:5.1s"></i><i class="pt2" style="--x:58%;--s:-20px;--d:7.4s"></i><i class="pt2" style="--x:74%;--s:16px;--d:5.8s"></i><i class="pt2" style="--x:90%;--s:-12px;--d:6.8s"></i></div>
 <div class="cue rv" style="--d:2.2s">SCROLL<i></i></div>
 </section>
 
